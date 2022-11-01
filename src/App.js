@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import Hoc from './hoc/HOC';
 import StockList from './components/StockList';
 import UserList from './components/UserList';
-import Hoc from './hoc/HOC';
+import DummyList from './components/DummyList';
+import SampleRenderProps from './renderProp/SampleRenderProps';
+import HardRenderProps from './renderProp/HardRenderProps';
 
 const StocksData = [
   {
@@ -34,6 +37,22 @@ const UsersData = [
   }
 ];
 
+const DummyData = [
+  {
+      id: 1,
+      name: 'Dummy'
+        
+  },
+  {
+      id: 2,
+      name: 'Stupid'
+  },
+  {
+      id: 3,
+      name: 'Ugly'
+  }
+];
+
 const Stocks = Hoc(
   StockList,
   StocksData
@@ -50,7 +69,15 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1>0. Just component</h1>
+        <DummyList data={DummyData}></DummyList>
+        <h1>1. HOC Example</h1>
         <Users></Users>
+        <br></br>
+        <Stocks></Stocks>
+        <h1>2. Render Props Example</h1>
+        <SampleRenderProps />
+        <HardRenderProps/>
       </div>
     )
   }

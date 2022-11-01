@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default function Hoc(HocComponent, data){
+function Hoc(HocComponent, data){
     return class extends Component{
         constructor(props) {
             super(props);
@@ -16,3 +16,5 @@ export default function Hoc(HocComponent, data){
         }
     } 
 }
+
+export default Hoc
