@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import React  from 'react';
+import './App.css'
+
 import Hoc from './hoc/HOC';
-import StockList from './components/StockList';
-import UserList from './components/UserList';
-import DummyList from './components/DummyList';
+import StockList from './hoc/StockList';
+import UserList from './hoc/UserList';
+import DummyList from './hoc/DummyList';
+
 import SampleRenderProps from './renderProp/SampleRenderProps';
 import HardRenderProps from './renderProp/HardRenderProps';
+
+import useTheme from './hooks/useTheme'
 
 const StocksData = [
   {
@@ -64,11 +69,11 @@ const Users = Hoc(
 );
 
 
-class App extends Component {
-  
-  render() {
+function App() {
+  const { theme, toggleTheme } = useTheme();
+
     return (
-      <div>
+      <div className={`App ${theme}`} style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
         <h1>0. Just component</h1>
         <DummyList data={DummyData}></DummyList>
         <h1>1. HOC Example</h1>
@@ -78,9 +83,12 @@ class App extends Component {
         <h1>2. Render Props Example</h1>
         <SampleRenderProps />
         <HardRenderProps/>
+        <h1>3. Custom Hooks</h1>
+        <button type="button" onClick={toggleTheme}>
+          Switch theme
+      </button>
       </div>
     )
   }
-}
 
 export default App;
