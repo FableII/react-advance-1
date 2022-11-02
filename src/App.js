@@ -10,6 +10,7 @@ import SampleRenderProps from './renderProp/SampleRenderProps';
 import HardRenderProps from './renderProp/HardRenderProps';
 
 import useTheme from './hooks/useTheme'
+import UseStateEffectTester from './components/UseStateEffectTester';
 
 const StocksData = [
   {
@@ -87,6 +88,8 @@ function App() {
         <button type="button" onClick={toggleTheme}>
           Switch theme
       </button>
+      <h1>4. UseState and UseEffect Hooks</h1>
+      <UseStateEffectTester></UseStateEffectTester>
       </div>
     )
   }
