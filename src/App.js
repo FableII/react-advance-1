@@ -11,6 +11,7 @@ import HardRenderProps from './renderProp/HardRenderProps';
 
 import useTheme from './hooks/useTheme'
 import UseStateEffectTester from './components/UseStateEffectTester';
+import UseContextTester from './components/UseContextTester';
 
 const StocksData = [
   {
@@ -88,7 +89,9 @@ function App() {
         <button type="button" onClick={toggleTheme}>
           Switch theme
       </button>
-      <h1>4. UseState and UseEffect Hooks</h1>
+      <h1>4. UseContext Hook</h1>
+      <UseContextTester></UseContextTester>
+      <h1>5. UseState and UseEffect Hooks</h1>
       <UseStateEffectTester></UseStateEffectTester>
       </div>
     )

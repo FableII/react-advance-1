@@ -20,13 +20,13 @@ const UsecountEffectTester = () => {
         setCount(counter = initialValue)
     }
 
-    useEffect(()=>{
-        console.log('Trigger use effect hook');
-
-        setTimeout(()=>{
-            setMessage("I'm fine, thanks for asking");
-        }, 2000)
-    })
+    useEffect(() => {
+        console.log('trigger use effect hook');
+    
+        setTimeout(() => {
+          setMessage("I'm fine, thanks for asking.");
+        }, 5000)
+      }, []);
 
         return (
             <div>
