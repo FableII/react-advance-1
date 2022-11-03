@@ -6,3 +6,17 @@
   background-color: gray;
 }
 
+.box {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+button {
+  margin: 0 10px;
+}
+
+.extra {
+  background-color: gray;
+}

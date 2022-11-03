@@ -12,6 +12,8 @@ import HardRenderProps from './renderProp/HardRenderProps';
 import useTheme from './hooks/useTheme'
 import UseStateEffectTester from './components/UseStateEffectTester';
 import UseContextTester from './components/UseContextTester';
+import {UseCallbackTester, UseMemoTester} from './components/UseClbMemoTester';
+import UseReducerTester from './components/UseReducerTester';
 
 const StocksData = [
   {
@@ -90,9 +92,14 @@ function App() {
           Switch theme
       </button>
       <h1>4. UseContext Hook</h1>
-      <UseContextTester></UseContextTester>
+      <UseContextTester/>
       <h1>5. UseState and UseEffect Hooks</h1>
-      <UseStateEffectTester></UseStateEffectTester>
+      <UseStateEffectTester/>
+      <h1>6. UseCallback and UseMemo Hooks</h1>
+      <UseCallbackTester/>
+      <UseMemoTester/>
+      <h1>7. UseReducer Hook</h1>
+      <UseReducerTester/>
       </div>
     )
   }
