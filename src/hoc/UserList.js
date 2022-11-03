@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import TableRow from './TableRow';
+import Hoc from './HOC';
 
+const UsersData = [
+  {
+      id: 1,
+      name: 'Krunal'
+        
+  },
+  {
+      id: 2,
+      name: 'Ankit'
+  },
+  {
+      id: 3,
+      name: 'Rushabh'
+  }
+];
 class UserList extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
@@ -32,4 +48,11 @@ class UserList extends Component {
         );
       }
 }
-export default UserList;
+
+
+const Users = Hoc(
+  UserList,
+  UsersData
+);
+
+export default Users;
